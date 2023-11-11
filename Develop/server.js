@@ -1,7 +1,7 @@
 const express = require('express');
-const fileSystem = require('fs');
+const fs = require('fs');
 const path = require('path');
-const uniqueId = require('uuid');
+const uuid = require('uuid');
 
 const PORT = process.env.PORT || 3001;
 
@@ -12,8 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/api/notes', (req, res) => {
-    fileSystem.readFile('./db/db.json', 'utf8', (err, data) => {
-        if (err) {
+    fs.readFile('./db/db.json', 'utf8', (error, data) => {
+        if (error) {
             res.status(500).json({ error: 'Unable to read notes.' });
         } else {
             const notes = JSON.parse(data);
@@ -24,15 +24,15 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
     const newNote = req.body;
-    fileSystem.readFile('./db/db.json', 'utf8', (err, data) => {
-        if (err) {
+    fs.readFile('./db/db.json', 'utf8', (error, data) => {
+        if (error) {
             res.status(500).json({ error: 'Unable to read notes.' });
         } else {
             const notes = JSON.parse(data);
-            newNote.id = uniqueId.v4();
+            newNote.id = uuid.v4();
             notes.push(newNote);
-            fileSystem.writeFile('./db/db.json', JSON.stringify(notes), (err) => {
-                if (err) {
+            fs.writeFile('./db/db.json', JSON.stringify(notes), (error) => {
+                if (error) {
                     res.status(500).json({ error: 'Unable to write notes.' });
                 } else {
                     res.json(newNote);
