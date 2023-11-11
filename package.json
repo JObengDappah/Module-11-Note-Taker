@@ -1,0 +1,16 @@
+{
+  "name": "module-11-note-taker",
+  "version": "1.0.0",
+  "description": "An application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "uuid": "^9.0.0"
+  }
+}
