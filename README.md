@@ -1,39 +1,30 @@
 # Module-11-Note-Taker
 
-An application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+# Table of Content
 
-## User Stories
+[Description](#description)
+[Usage](#usage)
+[Contribution-Guidlines](#contribution-guidelines)
+[Link-to-Page](#link to page)
+[Screenshots](#screenshots)
 
-* AS A small business owner
+## Description
 
-* I WANT to be able to write and save notes
+  This project was created for a user to easily keep track of important reminders by writing and storing them as notes. The front end of this application is built on HTML, CSS, and JavaScript and sends HTTP requests to the backend API endpoints in order to function. The back end is built on node.js and the express.js framework to handle requests. The application uses the fs module to save user input and the uuid npm package for unique ids.
+  
+## Usage
 
-* SO THAT I can organize my thoughts and keep track of tasks I need to complete
+  A user should hit the get started button on the landing page when opening the site. The + symbol in the top right corner creates a new note which accepts a title with a short description in the input fields. Once created, the note can be saved and will persist in the left hand column until deleted. After saving the note, the user can click on its title in the left hand column to view the description of the note.
 
-### Acceptance Criteria
+## Contribution Guidelines
 
-* GIVEN a note-taking application
+  The application's front end offers a delete button to the right of each note. Further development on the back end is needed to provide this functionality by adding a delete route.
 
-* WHEN I open the Note Taker
+## Link to Page
 
-* THEN I am presented with a landing page with a link to a notes page
+  [Click Here]()
 
-* WHEN I click on the link to the notes page
+## Screenshots
 
-* THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-
-* WHEN I enter a new note title and the note’s text
-
-* THEN a "Save Note" button and a "Clear Form" button appear in the navigation at the top of the page
-
-* WHEN I click on the Save button
-
-* THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes and the buttons in the navigation disappear
-
-* WHEN I click on an existing note in the list in the left-hand column
-
-* THEN that note appears in the right-hand column and a "New Note" button appears in the navigation
-
-* WHEN I click on the "New Note" button in the navigation at the top of the page
-
-* THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column and the button disappears
+  ![Screenshot One]()
+  ![Screenshot Two]()
