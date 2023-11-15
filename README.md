@@ -1,6 +1,6 @@
 # Module-11-Note-Taker
 
-# Table of Content
+## Table of Content
 
 [Description](#description)
 [Usage](#usage)
@@ -28,3 +28,5 @@
 
   ![Screenshot One]()
   ![Screenshot Two]()
+
+  ## 
